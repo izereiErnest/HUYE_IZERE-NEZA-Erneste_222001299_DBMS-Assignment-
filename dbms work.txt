@@ -1,0 +1,195 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use ruhande
+Database changed
+mysql> select *from ngoma;
++------+-------------+------------+--------+-------------------+----------+--------+---------+------------------------+------------------+
+| ID   | FIRST_NAME  | LAST_NAME  | GENDER | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     |
++------+-------------+------------+--------+-------------------+----------+--------+---------+------------------------+------------------+
+|    1 | INEZA       | Christelle | FEMALE | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 |
+|    1 | IZERE       | Ibrahym    | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | izereibral@gmail.com   | +(250) 783486293 |
+|    1 | MUTONI      | Giselle    | FEMALE | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | mutgiselle@gmail.com   | +(250) 783425363 |
+|    1 | MUGISHA     | Elie       | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 2 | mugishaelie@gmail.com  | +(250) 783475533 |
+|    1 | NDENGEYINKA | Francois   | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ndengfranc@gmail.com   | +(250) 723456827 |
+|    1 | ISHIMWE     | Museko     | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ishmuseko@gmail.com    | +(250) 783456824 |
+|    1 | MUGABO      | Richard    | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 3 | richmugabo@gmail.com   | +(250) 783451235 |
+|    1 | MUGABO      | Jean Paul  | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | jeanpaul@gmail.com     | +(250) 793884194 |
+|    1 | MIZERO      | Claire     | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 5 | clairemizero@gmail.com | +(250) 793844112 |
+|    1 | UMUKUNDWA   | Ange       | FEMALE | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | angemukun@gmail.com    | +(250) 788811234 |
++------+-------------+------------+--------+-------------------+----------+--------+---------+------------------------+------------------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set ID='1' WHERE FIRST_NAME='INEZA';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> update ngoma set ID='2' WHERE FIRST_NAME='IZERE';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='3' WHERE FIRST_NAME='MUTONI';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='4' WHERE FIRST_NAME='MUGISHA';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='5' WHERE FIRST_NAME='NDENGEYINKA';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='6' WHERE FIRST_NAME='ISHIMWE';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='7' WHERE LAST_NAME='Richard';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='8' WHERE LAST_NAME='Jean Paul';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='9' WHERE FIRST_NAME='MIZERO';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set ID='10' WHERE FIRST_NAME='UMUKUNDWA';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select *from ngoma;
++------+-------------+------------+--------+-------------------+----------+--------+---------+------------------------+------------------+
+| ID   | FIRST_NAME  | LAST_NAME  | GENDER | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     |
++------+-------------+------------+--------+-------------------+----------+--------+---------+------------------------+------------------+
+|    1 | INEZA       | Christelle | FEMALE | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 |
+|    2 | IZERE       | Ibrahym    | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | izereibral@gmail.com   | +(250) 783486293 |
+|    3 | MUTONI      | Giselle    | FEMALE | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | mutgiselle@gmail.com   | +(250) 783425363 |
+|    4 | MUGISHA     | Elie       | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 2 | mugishaelie@gmail.com  | +(250) 783475533 |
+|    5 | NDENGEYINKA | Francois   | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ndengfranc@gmail.com   | +(250) 723456827 |
+|    6 | ISHIMWE     | Museko     | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ishmuseko@gmail.com    | +(250) 783456824 |
+|    7 | MUGABO      | Richard    | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 3 | richmugabo@gmail.com   | +(250) 783451235 |
+|    8 | MUGABO      | Jean Paul  | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | jeanpaul@gmail.com     | +(250) 793884194 |
+|    9 | MIZERO      | Claire     | MALE   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 5 | clairemizero@gmail.com | +(250) 793844112 |
+|   10 | UMUKUNDWA   | Ange       | FEMALE | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | angemukun@gmail.com    | +(250) 788811234 |
++------+-------------+------------+--------+-------------------+----------+--------+---------+------------------------+------------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma drop gender;
+Query OK, 10 rows affected (0.07 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select *from ngoma;
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+
+| ID   | FIRST_NAME  | LAST_NAME  | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+
+|    1 | INEZA       | Christelle | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 |
+|    2 | IZERE       | Ibrahym    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | izereibral@gmail.com   | +(250) 783486293 |
+|    3 | MUTONI      | Giselle    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | mutgiselle@gmail.com   | +(250) 783425363 |
+|    4 | MUGISHA     | Elie       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 2 | mugishaelie@gmail.com  | +(250) 783475533 |
+|    5 | NDENGEYINKA | Francois   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ndengfranc@gmail.com   | +(250) 723456827 |
+|    6 | ISHIMWE     | Museko     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ishmuseko@gmail.com    | +(250) 783456824 |
+|    7 | MUGABO      | Richard    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 3 | richmugabo@gmail.com   | +(250) 783451235 |
+|    8 | MUGABO      | Jean Paul  | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | jeanpaul@gmail.com     | +(250) 793884194 |
+|    9 | MIZERO      | Claire     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 5 | clairemizero@gmail.com | +(250) 793844112 |
+|   10 | UMUKUNDWA   | Ange       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | angemukun@gmail.com    | +(250) 788811234 |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+
+10 rows in set (0.00 sec)
+
+mysql> select id,first_name,last_name from ngoma;
++------+-------------+------------+
+| id   | first_name  | last_name  |
++------+-------------+------------+
+|    1 | INEZA       | Christelle |
+|    2 | IZERE       | Ibrahym    |
+|    3 | MUTONI      | Giselle    |
+|    4 | MUGISHA     | Elie       |
+|    5 | NDENGEYINKA | Francois   |
+|    6 | ISHIMWE     | Museko     |
+|    7 | MUGABO      | Richard    |
+|    8 | MUGABO      | Jean Paul  |
+|    9 | MIZERO      | Claire     |
+|   10 | UMUKUNDWA   | Ange       |
++------+-------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add VILLAGE char(20);
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select *from ngoma;
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+| ID   | FIRST_NAME  | LAST_NAME  | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     | VILLAGE |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+|    1 | INEZA       | Christelle | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 | NULL    |
+|    2 | IZERE       | Ibrahym    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | izereibral@gmail.com   | +(250) 783486293 | NULL    |
+|    3 | MUTONI      | Giselle    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | mutgiselle@gmail.com   | +(250) 783425363 | NULL    |
+|    4 | MUGISHA     | Elie       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 2 | mugishaelie@gmail.com  | +(250) 783475533 | NULL    |
+|    5 | NDENGEYINKA | Francois   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ndengfranc@gmail.com   | +(250) 723456827 | NULL    |
+|    6 | ISHIMWE     | Museko     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ishmuseko@gmail.com    | +(250) 783456824 | NULL    |
+|    7 | MUGABO      | Richard    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 3 | richmugabo@gmail.com   | +(250) 783451235 | NULL    |
+|    8 | MUGABO      | Jean Paul  | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | jeanpaul@gmail.com     | +(250) 793884194 | NULL    |
+|    9 | MIZERO      | Claire     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 5 | clairemizero@gmail.com | +(250) 793844112 | NULL    |
+|   10 | UMUKUNDWA   | Ange       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | angemukun@gmail.com    | +(250) 788811234 | NULL    |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set village='madina' where cell='ngoma 1';
+Query OK, 5 rows affected (0.00 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select *from ngoma;
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+| ID   | FIRST_NAME  | LAST_NAME  | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     | VILLAGE |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+|    1 | INEZA       | Christelle | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 | madina  |
+|    2 | IZERE       | Ibrahym    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | izereibral@gmail.com   | +(250) 783486293 | madina  |
+|    3 | MUTONI      | Giselle    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | mutgiselle@gmail.com   | +(250) 783425363 | madina  |
+|    4 | MUGISHA     | Elie       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 2 | mugishaelie@gmail.com  | +(250) 783475533 | NULL    |
+|    5 | NDENGEYINKA | Francois   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ndengfranc@gmail.com   | +(250) 723456827 | NULL    |
+|    6 | ISHIMWE     | Museko     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ishmuseko@gmail.com    | +(250) 783456824 | NULL    |
+|    7 | MUGABO      | Richard    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 3 | richmugabo@gmail.com   | +(250) 783451235 | NULL    |
+|    8 | MUGABO      | Jean Paul  | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | jeanpaul@gmail.com     | +(250) 793884194 | madina  |
+|    9 | MIZERO      | Claire     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 5 | clairemizero@gmail.com | +(250) 793844112 | NULL    |
+|   10 | UMUKUNDWA   | Ange       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | angemukun@gmail.com    | +(250) 788811234 | madina  |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> select *from ngoma where id='1' and cell='ngoma 1';
++------+------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+| ID   | FIRST_NAME | LAST_NAME  | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     | VILLAGE |
++------+------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+|    1 | INEZA      | Christelle | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 | madina  |
++------+------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+1 row in set (0.02 sec)
+
+mysql> select *from ngoma where district='huye' or cell='ngoma 1';
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+| ID   | FIRST_NAME  | LAST_NAME  | PROVINCE          | DISTRICT | SECTOR | CELL    | EMAIL_ADDRESS          | PHONE_NUMBER     | VILLAGE |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+|    1 | INEZA       | Christelle | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | inezachristl@gmail.com | +(250) 783467198 | madina  |
+|    2 | IZERE       | Ibrahym    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | izereibral@gmail.com   | +(250) 783486293 | madina  |
+|    3 | MUTONI      | Giselle    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | mutgiselle@gmail.com   | +(250) 783425363 | madina  |
+|    4 | MUGISHA     | Elie       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 2 | mugishaelie@gmail.com  | +(250) 783475533 | NULL    |
+|    5 | NDENGEYINKA | Francois   | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ndengfranc@gmail.com   | +(250) 723456827 | NULL    |
+|    6 | ISHIMWE     | Museko     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 4 | ishmuseko@gmail.com    | +(250) 783456824 | NULL    |
+|    7 | MUGABO      | Richard    | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 3 | richmugabo@gmail.com   | +(250) 783451235 | NULL    |
+|    8 | MUGABO      | Jean Paul  | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | jeanpaul@gmail.com     | +(250) 793884194 | madina  |
+|    9 | MIZERO      | Claire     | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 5 | clairemizero@gmail.com | +(250) 793844112 | NULL    |
+|   10 | UMUKUNDWA   | Ange       | SOUTHERN PROVINCE | HUYE     | NGOMA  | NGOMA 1 | angemukun@gmail.com    | +(250) 788811234 | madina  |
++------+-------------+------------+-------------------+----------+--------+---------+------------------------+------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql>
